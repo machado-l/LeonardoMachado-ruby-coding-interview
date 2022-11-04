@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   def index
-    puts params
     users = User
               .by_company(search_params[:company_id])
               .by_username(search_params[:username])
